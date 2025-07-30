@@ -14,7 +14,7 @@ from unittest.mock import patch, MagicMock
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import cli
-from pki_token import PKITokenNetwork
+from pki_network import PKITokenNetwork
 
 class TestCLIFunctions(unittest.TestCase):
     """Test CLI functions directly"""

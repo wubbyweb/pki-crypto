@@ -5,7 +5,7 @@ import os
 import tempfile
 import shutil
 import json
-from pki_token import SecureToken, PKITokenNetwork
+from pki_network import SecureToken, PKITokenNetwork
 
 class TestIntegrationFlow(unittest.TestCase):
     """Integration tests for complete token issuance and verification flows"""

@@ -6,7 +6,7 @@ import tempfile
 import shutil
 import json
 from datetime import datetime, timezone
-from pki_token import SecureToken, PKITokenNetwork
+from pki_network import SecureToken, PKITokenNetwork
 
 class TestSecureToken(unittest.TestCase):
     """Unit tests for SecureToken class"""

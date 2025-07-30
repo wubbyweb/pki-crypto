@@ -4,7 +4,7 @@ import unittest
 import os
 import tempfile
 import shutil
-from pki_token import PKITokenNetwork, SecureToken
+from pki_network import PKITokenNetwork, SecureToken
 
 class TestHierarchicalVerification(unittest.TestCase):
     """Test hierarchical verification capabilities"""

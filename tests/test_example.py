@@ -2,7 +2,7 @@
 
 import os
 import shutil
-from pki_token import PKITokenNetwork
+from pki_network import PKITokenNetwork
 
 def test_pki_network():
     test_dir = "test_tokens"

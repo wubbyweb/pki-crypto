@@ -3,7 +3,7 @@
 import argparse
 import sys
 import json
-from pki_token import PKITokenNetwork
+from pki_network import PKITokenNetwork
 
 def create_master(args):
     network = PKITokenNetwork(args.storage_dir)

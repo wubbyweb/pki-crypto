@@ -3,7 +3,7 @@
 import os
 import json
 import tempfile
-from pki_token import PKITokenNetwork
+from pki_network import PKITokenNetwork
 from cryptography.hazmat.primitives import serialization
 
 def create_secure_token_package(network: PKITokenNetwork, node_id: str, output_dir: str):

@@ -6,7 +6,7 @@ import tempfile
 import shutil
 import json
 import hashlib
-from pki_token import SecureToken, PKITokenNetwork
+from pki_network import SecureToken, PKITokenNetwork
 
 class TestSecurityAndTamperDetection(unittest.TestCase):
     """Test security features and tamper detection"""

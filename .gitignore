@@ -3,3 +3,6 @@
 demo_isolated_*
 .claude
 **/*__pycache__
+pkg_for_dist
+*.tar.gz
+**/*.DS_Store
