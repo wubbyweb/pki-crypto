@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pki-token-network"
+version = "1.0.0"
+description = "A secure blockchain-inspired PKI token system with hierarchical verification"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "PKI Development Team", email = "developer@example.com"}
+]
+maintainers = [
+    {name = "PKI Development Team", email = "developer@example.com"}
+]
+keywords = ["pki", "cryptography", "blockchain", "token", "verification", "security", "certificates"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators", 
+    "Topic :: Security :: Cryptography",
+    "Topic :: System :: Systems Administration :: Authentication/Directory",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.7"
+dependencies = [
+    "cryptography>=3.4.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/pki-token-network"
+Documentation = "https://github.com/yourusername/pki-token-network/blob/main/README.md"
+Repository = "https://github.com/yourusername/pki-token-network"
+"Bug Tracker" = "https://github.com/yourusername/pki-token-network/issues"
+
+[project.scripts]
+pki-cli = "pki_network:cli_main"
+token-manager = "token_manager:main"
+token-packager = "token_packager:main"
+
+[tool.setuptools]
+packages = ["pki_token_network"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md", "*.txt", "*.json"]

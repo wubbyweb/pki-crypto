@@ -10,10 +10,14 @@ import json
 from io import StringIO
 from unittest.mock import patch, MagicMock
 
-# Add the current directory to Python path for imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Add the parent directory to Python path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-import cli
+import importlib.util
+cli_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "pki-cli.py")
+spec = importlib.util.spec_from_file_location("pki_cli", cli_path)
+cli = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(cli)
 from pki_network import PKITokenNetwork
 
 class TestCLIFunctions(unittest.TestCase):
@@ -200,7 +204,7 @@ class TestCLICommandLine(unittest.TestCase):
     def setUp(self):
         """Set up test environment"""
         self.test_dir = tempfile.mkdtemp()
-        self.cli_script = "cli.py"
+        self.cli_script = "pki-cli.py"
     
     def tearDown(self):
         """Clean up test environment"""

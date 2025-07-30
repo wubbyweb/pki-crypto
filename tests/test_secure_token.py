@@ -87,7 +87,9 @@ class TestSecureToken(unittest.TestCase):
         token_dict = token.to_dict()
         
         expected_keys = ['node_id', 'issuer_token_hash', 'issuer_id', 'timestamp', 
-                        'token_id', 'token_data', 'token_hash']
+                        'token_id', 'token_data', 'token_hash', 'master_id', 
+                        'hierarchy_level', 'master_signature', 'issuer_signature', 
+                        'delegation_proof', 'merkle_proof', 'verification_paths']
         self.assertEqual(set(token_dict.keys()), set(expected_keys))
         self.assertEqual(token_dict['node_id'], "test-node")
         self.assertEqual(token_dict['issuer_token_hash'], "issuer-hash")

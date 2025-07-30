@@ -1,0 +1,32 @@
+# Include documentation files
+include README.md
+include HOWTO.md
+include WIZARD_README.md
+include TDD_SUMMARY.md
+include LICENSE
+include CHANGELOG.md
+
+# Include requirements and configuration
+include requirements.txt
+include pyproject.toml
+include setup.py
+
+# Include test files
+recursive-include tests *.py
+recursive-include tests *.md
+
+# Include examples and demos
+include token-manager-demo.py
+include show-programs.py
+
+# Exclude development files
+exclude .gitignore
+exclude .git*
+exclude *.pyc
+exclude __pycache__
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+
+# Exclude storage directories (contains private keys)
+exclude token_storage/
+recursive-exclude token_storage *

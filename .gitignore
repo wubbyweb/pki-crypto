@@ -1,8 +1,53 @@
-**/*token_storage
-**/*keys
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+.coverage
+.pytest_cache/
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# PKI Token Network specific
+token_storage/
+*.pem
+*.key
+*.crt
 demo_isolated_*
+
+# IDE files
+.vscode/
+.idea/
+*.swp
 .claude
-**/*__pycache__
+
+# OS generated files
+.DS_Store
+Thumbs.db
 pkg_for_dist
 *.tar.gz
-**/*.DS_Store
+
+# PyPI credentials
+.pypirc
